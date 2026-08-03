@@ -4,9 +4,7 @@ import FundoVerde from "../../assets/EfeitoVerde.jpeg"
 
 
 function Login() {
-    const [mode,setMode]= useState ("login")    //mudou aqui
-    const Faca_Login =() => setMode("Login1")
-    const Cadastre_se = () => setMode ("Register1")
+    const [mode, setMode] = useState ("login")  //mudou aqui
     return (
         <Container>
             <Card>
@@ -16,9 +14,10 @@ function Login() {
                 <BoxLeft>
 
                     {/* ==========================================================================================================*/}
-                    <Login1 className={mode==="login" ? "active":""}>
+                    <Login1 className={mode ==="login" ? "active" : ""} >
+    
 
-                        <Title>Fazer Login</Title>
+                        <Title >Fazer Login</Title>
 
                         <Questions>
                             <SmallBoxes type="text" placeholder="E-mail" />
@@ -27,7 +26,7 @@ function Login() {
                         </Questions>
                     </Login1>
                     {/* ==========================================================================================================*/}
-                    <Login_in className ={mode==="signup" ? "active": ""}>
+                    <Login_in className={mode === "signup" ? "active": ""}>
 
                         <Title>Já tem <br /> uma conta?</Title>
 
@@ -46,7 +45,9 @@ function Login() {
                 <BoxRight>
 
                     {/* ==========================================================================================================*/}
-                    <Register1 className={mode==="signup" ? "active" : ""}>
+                    
+                    <Register1 className={mode === "signup" ? "active" : ""} >
+
                         <Title>Cadastro</Title>
                         <Questions>
                             <SmallBoxes type="text" placeholder="Nome:" />
@@ -59,8 +60,9 @@ function Login() {
 
                     {/* ==========================================================================================================*/}
 
-                    <Sing_Up className={mode==="login" ? "active" : ""}>
-                        <Title>Não tem <br /> uma conta ?</Title>
+                    <Sing_Up className={mode === "login" ? "active" : ""}>
+
+                        <Title >Não tem <br /> uma conta ?</Title>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui totam fugiat laudantium saepe enim, iste, esse vero aliquid veniam dolorem amet incidunt cupiditate quas laboriosam cum aspernatur non beatae sunt!</p>
 
                         <Button onClick={() => setMode("signup")}>

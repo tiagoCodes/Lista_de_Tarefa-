@@ -68,13 +68,17 @@ export const Login1 = styled.form`
     align-items: center;
     position: absolute;
     z-index: 1;
-    opacity: 0; //  mudou 
-    pointer-events: none;     //  mudou 
-    transition: opacity 0.5s ease;         //  mudou 
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-200px);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    
 
-    &.active {  // mudou
-        opacity: 1;
+    &.active{
+        transform: translateX(0px);
         pointer-events: auto;
+        opacity: 1;
+        
     }
 
         ${Title}{
@@ -91,15 +95,16 @@ export const Login_in = styled.div`
     flex-direction:column;
     justify-content: center;       //SECUNDARIO============
     align-items: center;
-    opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;  // mudou 
+    opacity: 0;
+    transform: opacity 0.5s ease;
 
-    &.active{  // mudou 
-        opacity:1;
+    &.active{
+        opacity: 1;
         pointer-events: auto;
         z-index: 1;
     }
+    
     p{
 
         margin-bottom: 32px;
@@ -144,12 +149,18 @@ export const Register1 = styled.div`
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;  //  mudou
+    transition: opacity 0.5s ease;
+    transform: translateX(500px);
+    transition: transform 0.5s ease, opacity 0.3s ease;
 
-  &.active {   //mudou
-    opacity: 1;
-    pointer-events: auto;
-  }
+
+    &.active{
+        transform: translateX(0px);
+        opacity: 1;
+        pointer-events: auto;
+
+    }
+ 
 
 `
 
@@ -160,14 +171,15 @@ export const Sing_Up = styled.div`
     justify-content: center;       //PRINCIPAL====================
     align-items: center;
     z-index: 1;
-    opacity: 0;    //mudou
-    pointer-events: none;    //mudou
-    transition: opacity 0.5s ease;    //mudou
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 
-    &.active {    //mudou
-        opacity: 1;     //mudou
-        pointer-events: auto;     //mudou
+    &.active{
+        opacity: 1;
+        pointer-events: auto;
     }
+    
 
     p{
         margin-bottom: 32px;
@@ -228,14 +240,12 @@ export const Efeito = styled.div`
     top: 0;
     bottom: 0;
     z-index: 0;
-    transition: transform 0.8s ease;
+    transition: transform 0.5s ease, opacity 0.3s ease;
 
-
-    &.login {
+    &.login{
         transform: translateX(50%);
     }
-
-    &.signup {
+    &.signup{
         transform: translateX(-50%);
     }
 
