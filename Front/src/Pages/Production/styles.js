@@ -18,6 +18,7 @@ export const Title2 = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 650px;
     
 
 h1{
@@ -35,6 +36,7 @@ export const SmallContainer = styled.section`
     justify-content: center;
     flex-direction: column;
     width:55%;
+    min-width:550px;
     height:65%;
     margin-top: 100px;
     background-color: RGBA( 240, 248, 255, 0.8 );
@@ -51,6 +53,7 @@ export const Box1 = styled.div`
     width: 90%;
     height: 170px;
     margin-top: 10px;
+    
     
 
 .exhibition{
@@ -70,7 +73,7 @@ export const Conversion = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     height: 100px;
     gap: 12px;
     margin-bottom: 10px;
@@ -78,24 +81,27 @@ export const Conversion = styled.form`
     .field{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     height: 65px;
     position: relative;
-    right: -40px;
+    right: -30px;
     
     label{
         font-size: 20px;
         font-family: "Outfit", sans-serif;
     }
     input{
+        width:100%;
          height: 100%;
          border-radius: 10px;
          border: none;
          font-family:"Outfit", sans-serif;
          font-size: 15px;
+         padding: 5px;
     }
 
     select{
+        width:90%;
         height: 100%;
         border-radius:5px;
         border: none;
@@ -103,7 +109,7 @@ export const Conversion = styled.form`
         font-size: 20px;
     }
     button{
-        width: 100px;
+        width: 70%;
         height: 100%;
         border-radius:10px;
         margin-top: 25px;
@@ -117,22 +123,54 @@ export const Conversion = styled.form`
 
 export const Record = styled.table`
 
-width: 80%;
-height: 35%;
-gap:10px;
-border-radius: 30px;
-box-shadow: 2px 2px 10px ;
-tr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-}
-th{
-    font-weight: bold;
-    font-family: "Outfit", sans-serif;
-    font-size: 20px;
+    width: 80%;
+    height: 35%;
+    gap:10px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px ;
     
-}
+    tr{    //  cada coluna é um tr
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+overflow-y: auto;
+    
+    }
+
+    th{
+        font-weight: bold;
+        font-family: "Outfit", sans-serif;    // É o cabeçalho  (descrição, valor,, tipo)  th só aparece no theader
+        font-size: 20px;  
+    }
+
+    td{   // São cada componente que é insserido na coluna incerida   td só aparece no tbody
+        font-family: "Outfit", sans-serif;
+        font-size: 18px;
+        width: 95px;
+        
+        
+    }
+    .Seta {
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    
+    }
+    .exclude{
+        cursor: pointer;
+        margin-left:50px;
+        
+    }
+    .Description{
+        margin-left:50px;
+    }
+
+    .Value{
+        margin-left:50px;
+        
+
+    }
+
 `
